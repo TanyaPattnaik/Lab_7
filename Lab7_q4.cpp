@@ -1,5 +1,5 @@
-#include <iostream.h>
-
+#include <iostream>
+using namespace std;
 
 // ********************************************************************
 //  Declaration of class Point
@@ -28,8 +28,8 @@ public:
   void Set_Y(int yval);
 
 //Lab 7 exercise 4.1. Add declaration of member function Print here:
-
-// private data members x, y represent coordinates of the point:
+  void print();
+ // private data members x, y represent coordinates of the point:
 private:
   int X;
   int Y;
@@ -87,22 +87,11 @@ void Point::Set_Y(int yval)
 } 
     
 
-//Lab 7 exercise 4.1. Add definition of member function print:
-
-
-// ********************************************************************
-//  Declaration of class Rectangle
-// ********************************************************************
-
-//Lab 7 exercise 4.2, 4.3: Add class Rectangle declaration HERE: 
-
-// ********************************************************************
-//  Methods for class Rectangle
-// ********************************************************************
-
-//Lab 7 exercise 4.2, 4.3. Add class Rectangle methods HERE: 
-
-
+//definition of print
+void Point::print()
+{
+	cout<<"\n the points is \t ("<<X<<","<<Y<<")\t";
+}
 
 // ********************************************************************
 //  main() function for testing classes Point and Rectangle
@@ -117,6 +106,7 @@ int main()
   Point p1;
   cout<< "The x value for p1 is " << p1.Get_X() << endl;
   cout<< "The y value for p1 is " << p1.Get_Y() << endl;
+  
 
 // Declaring a point with coordinates X = 2, Y = 3:
   Point p2(2, 3);
@@ -129,9 +119,10 @@ int main()
   cout<< "The x value for p2 is " << p2.Get_X() << endl;
   cout<< "The y value for p2 is " << p2.Get_Y() << endl;
 
-//Lab 7 exercise 4.1. Test member function print on points p1, p2:
+  p1.print();
+  p2.print();
 
-//Lab 7 Exercises 4.2, 4.3. Testing of the class Rectangle goes here:  
+
 
   return 0;
 }
