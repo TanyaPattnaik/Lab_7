@@ -13,27 +13,36 @@ class Point
 	int y;
 public:
   // default class constructor (with no arguments):
-  Point()
-  {
-	  int x=0;
-	  int y=0;
+  Point(){
+	  int X=0;
+	  int Y=0;
   }
 
-  // class constructor that sets the coordinates x, y to the values xval,
-  // yval:
+  // class constructor that sets the coordinates x, y to the values xval,yval
   Point(int xval, int yval)
   {
-	  x=xval;
-	  y=yval;
+	 X=xval;
+	  Y=yval;
   }
 
   // member function for moving a point by dx, dy:
-  void Move(int dx, int dy);
+  void Move(int dx, int dy)
+	  {
+  X += dx;
+  Y += dy;
+  }
 
   // member functions for getting values of x, y:
-  int Get_X() const;
-  int Get_Y() const;
-
+  int Get_X() const
+  {
+  return X;
+  }
+	
+  int Get_Y() const
+  {
+  return Y;
+  }
+   
   // member functions for setting x, y to xval, yval respectively  
   void Set_X(int xval);
   void Set_Y(int yval);
@@ -46,44 +55,6 @@ private:
   int Y;
 };  
 
-
-// ********************************************************************
-//  Methods for class Point
-// ********************************************************************
-
-// class constructor sets X, Y to zero when no values are specified:
-Point::Point()
-{
-  X = 0;
-  Y = 0;
-}
-
-// class constructor sets X, Y to given values xval, yval:
-Point::Point(int xval, int yval)
-{
-  X = xval;
-  Y = yval;
-}
-
-// member function Move: increases the x coordinate by dx and the y
-// coordinate by dy.
-void Point::Move(int dx, int dy)
-{
-  X += dx;
-  Y += dy;
-}
-
-// Get_X returns the value of the X coordinate
-int Point::Get_X() const
-{
-  return X;
-}
-
-// Get_Y returns the value of the Y coordinate
-int Point::Get_Y() const
-{
-  return Y;
-}
 
 // Set_X sets the value of X coordinate to xval
 void Point::Set_X(int xval)
