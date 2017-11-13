@@ -8,13 +8,24 @@ using namespace std;
 // class Point represents a two-dimensional point
 class Point
 {
+	private:
+	int x;
+	int y;
 public:
   // default class constructor (with no arguments):
-  Point(); 
+  Point()
+  {
+	  int x=0;
+	  int y=0;
+  }
 
   // class constructor that sets the coordinates x, y to the values xval,
   // yval:
-  Point(int xval, int yval);
+  Point(int xval, int yval)
+  {
+	  x=xval;
+	  y=yval;
+  }
 
   // member function for moving a point by dx, dy:
   void Move(int dx, int dy);
